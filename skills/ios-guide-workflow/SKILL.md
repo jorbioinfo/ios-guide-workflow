@@ -94,6 +94,8 @@ Wait for observable data readiness, completed presentation, or stable visible ge
 
 When a step scrolls or navigates to a target, wait for the movement to finish and measure the target at its settled position before showing the highlight and prompt. Use the app's motion style for the reveal. With Reduce Motion enabled, wait for the same placement, then show the highlight and prompt directly without a reveal animation. Verify this order when moving forward and back in both motion settings.
 
+When an interaction leaves the active step and rendered highlight bounds unchanged, keep the highlight, prompt, and any connector in place. Update only the prompt content and action state. Keep the current scroll position and skip the entrance transition. Use the normal placement checks when the step changes or the target needs to move.
+
 Check custom gesture and touch overlays as well as outer disabled flags. A native control's automation metadata may describe a different interaction layer from the one receiving real input.
 
 Match the hit region to the full visible surface of controls intended to be fully tappable. Check nearby decorative layers when touches fail, since visible clipping and hit boundaries can differ. Keep decorative layers from intercepting touches and preserve neighboring controls' intended behavior.
@@ -158,6 +160,7 @@ Choose checks proportional to the change and use the target project's existing t
 
 - State and data changes: focused tests for valid and invalid events, return/replay effects, identity, persistence, and failure paths. Leave a minimal runnable behavioral check for new non-trivial logic.
 - UI changes: operate the real affected flow, including its forward path and relevant back, skip, cancel, and re-entry paths. A tooltip existing is not enough to prove the target can be read or operated.
+- Updates within a step: compare the highlight and prompt positions before and after the interaction, and verify the new content and action state. Then advance and check that the new step is presented at its own target.
 - Text entry: operate keyboard opening, typing, closing, step changes, save/cancel, and relevant exit or re-entry paths on the affected small-screen and text-size configurations. Check the visible value and resulting state as well as geometry; keyboard-hidden screenshots cannot validate editing.
 - Layout changes: inspect affected small and regular layouts and accessibility text sizes. Include supported themes, languages, right-to-left layouts, keyboards, or orientations when the change or claim depends on them. Verify actual frames and rendered results.
 - SDK or concurrency failures: exercise the real callback path under relevant build/runtime conditions. Inspect callback isolation and captured values; do not assume every callback uses the same queue. A fake or disabled integration cannot validate a path it bypasses.
