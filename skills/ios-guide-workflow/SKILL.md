@@ -50,7 +50,11 @@ Follow an explicit product decision about permissions or progression. A descript
 
 For an action-focused introduction, put necessary concepts beside the action they explain. Remove optional chart interpretation or variant exploration from that guide when it does not serve the goal; preserve the app's features and guides whose purpose is explanation. Use the requested native preview without requiring unrelated exploration or external sharing. Prefill incidental setup when appropriate, while keeping the action being taught real.
 
-For independent section guides, give each its own entry, progress, and completion according to the product's policy. In chart guides, explain the population, measure, time unit, and active filters before comparing results. Describe how the filter changes the included data and reserve performance claims for results that support them.
+For independent section guides, give each its own entry, progress, and completion according to the product's policy.
+
+Decide what question the user should be able to answer before choosing sample data for a chart guide. Choose inputs that make the relevant comparison visible in the app's actual output. A steady metric can help answer the question when the guide compares it with another measure.
+
+In the prompt, name the action, point to the value to read, and explain what conclusion the displayed results support. Use matching filters and corresponding time windows when comparing values across charts. Explain how filters change which records are included. Identify the population, measure, time unit, and each metric's denominator where applicable.
 
 When explaining phases on a timeline, follow one concrete example across all the phases. Point out the event that marks the transition, show where it appears on the chart, and explain what to look for in each phase.
 
