@@ -52,6 +52,8 @@ For an action-focused introduction, put necessary concepts beside the action the
 
 For independent section guides, give each its own entry, progress, and completion according to the product's policy.
 
+In a basic guide, teach the actions users can perform in the current flow. If the guide points to a feature at another access level, name the shortcut and where to find it, say when users can tap it, and explain what question the feature can answer. Leave the full interaction and worked examples with numerical values to the destination guide.
+
 Decide what question the user should be able to answer before choosing sample data for a chart guide. Choose inputs that make the relevant comparison visible in the app's actual output. A steady metric can help answer the question when the guide compares it with another measure.
 
 In the prompt, name the action, point to the value to read, and explain what conclusion the displayed results support. Use matching filters and corresponding time windows when comparing values across charts. Explain how filters change which records are included. Identify the population, measure, time unit, and each metric's denominator where applicable.
