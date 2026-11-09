@@ -74,6 +74,8 @@ Resolve background, surface, primary and secondary text, accent, border, focus, 
 
 Reuse native controls and existing components. Keep brand colors, typography, spacing, and motion decisions in the target project. If the required design direction is missing, ask for that decision rather than importing another product's look.
 
+When sections on the same screen have different access levels, use a labeled divider to show where the next level begins. Keep each mode switch and access message beside the controls or content it affects.
+
 Treat these as separate concepts:
 
 - The region highlighted to explain a group or screen.
