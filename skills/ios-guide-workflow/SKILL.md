@@ -56,7 +56,11 @@ Decide what question the user should be able to answer before choosing sample da
 
 In the prompt, name the action, point to the value to read, and explain what conclusion the displayed results support. Use matching filters and corresponding time windows when comparing values across charts. Explain how filters change which records are included. Identify the population, measure, time unit, and each metric's denominator where applicable.
 
+When a lesson uses multiple measures, explain what each measures and what a rise or fall means before interpreting them together. Use comparable examples to show what their combined changes reveal. Include measures moving in the same direction when that case helps answer the teaching question.
+
 When explaining phases on a timeline, follow one concrete example across all the phases. Point out the event that marks the transition, show where it appears on the chart, and explain what to look for in each phase.
+
+If a wide chart is hard to read on a phone, show the segment for the current phase or comparison at a readable scale. Keep the labels, units, and legend that connect each segment to the rest of the chart.
 
 When displaying progress, derive position and total from the actual visible step map. Define how the invitation is counted, count visible substeps consistently, exclude hidden transitions, and update progress on back or a revised flow. Do not combine several visible prompts into one reported step to disguise length. Keep progress readable, localized, and secondary to the current task using the app's design system.
 
@@ -164,6 +168,7 @@ Choose checks proportional to the change and use the target project's existing t
 
 - State and data changes: focused tests for valid and invalid events, return/replay effects, identity, persistence, and failure paths. Leave a minimal runnable behavioral check for new non-trivial logic.
 - UI changes: operate the real affected flow, including its forward path and relevant back, skip, cancel, and re-entry paths. A tooltip existing is not enough to prove the target can be read or operated.
+- After an entry or its destination is redesigned, start from the current control and exercise each affected guide step. Check that the prompt names the current control and action, the highlight covers the rendered target, and the prompt leaves the required controls visible and usable at supported text sizes. When the step requires opening a screen, check that the prompt and progression reflect its actual presentation, including after going back and reopening it.
 - Updates within a step: compare the highlight and prompt positions before and after the interaction, and verify the new content and action state. Then advance and check that the new step is presented at its own target.
 - Text entry: operate keyboard opening, typing, closing, step changes, save/cancel, and relevant exit or re-entry paths on the affected small-screen and text-size configurations. Check the visible value and resulting state as well as geometry; keyboard-hidden screenshots cannot validate editing.
 - Layout changes: inspect affected small and regular layouts and accessibility text sizes. Include supported themes, languages, right-to-left layouts, keyboards, or orientations when the change or claim depends on them. Verify actual frames and rendered results.
