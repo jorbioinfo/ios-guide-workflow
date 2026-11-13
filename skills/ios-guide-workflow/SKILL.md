@@ -58,6 +58,8 @@ Decide what question the user should be able to answer before choosing sample da
 
 In the prompt, name the action, point to the value to read, and explain what conclusion the displayed results support. Use matching filters and corresponding time windows when comparing values across charts. Explain how filters change which records are included. Identify the population, measure, time unit, and each metric's denominator where applicable.
 
+When several sections of a results panel serve the same teaching goal, show them in one step. Have users open the panel with the app's own control, then use one example to show where to find each section and which result it explains.
+
 When a lesson uses multiple measures, explain what each measures and what a rise or fall means before interpreting them together. Use comparable examples to show what their combined changes reveal. Include measures moving in the same direction when that case helps answer the teaching question.
 
 When explaining phases on a timeline, follow one concrete example across all the phases. Point out the event that marks the transition, show where it appears on the chart, and explain what to look for in each phase.
