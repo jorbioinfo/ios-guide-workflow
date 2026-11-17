@@ -118,6 +118,8 @@ When an interaction leaves the active step and rendered highlight bounds unchang
 
 Check custom gesture and touch overlays as well as outer disabled flags. A native control's automation metadata may describe a different interaction layer from the one receiving real input.
 
+For a read-only preview of a control with separately exposed options, such as a segmented control, check every option, including the selected one. If the container leaves options enabled in the accessibility hierarchy, disable them individually for the preview and verify that the control still works in normal use.
+
 Match the hit region to the full visible surface of controls intended to be fully tappable. Check nearby decorative layers when touches fail, since visible clipping and hit boundaries can differ. Keep decorative layers from intercepting touches and preserve neighboring controls' intended behavior.
 
 ## Handle keyboard states explicitly
@@ -173,6 +175,8 @@ If a guide visits another screen or mode for practice, preserve the destination'
 Keep temporary teaching examples clearly defined and isolated from normal storage and preferences. Introduce them only when the task or product decision calls for them, reuse real components, and verify their removal or retention explicitly.
 
 For sample analytics, supply reproducible isolated inputs to the app's real calculations and controls. Use transient inputs when persistence is unnecessary, and keep sample and user results separate in caches. Check that results match the current data source and filters before presenting an interpretation.
+
+If a timeline uses a window relative to today, check that it includes the sample events the guide teaches. When needed, anchor the practice window to a date in the sample data and use the same window when returning to the step.
 
 When a sample analytics guide completes, is skipped, or is interrupted, restore the user's prior view settings before loading real results. Use the same restored settings for the visible controls and the request or calculation. Ignore late sample results after exit. Verify that the displayed results match the real data source and restored controls.
 
