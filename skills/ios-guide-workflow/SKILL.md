@@ -56,6 +56,8 @@ When pointing to another guide, explain what users might need help with, which c
 
 In a basic guide, teach the actions users can perform in the current flow. If the guide points to a feature at another access level, name the shortcut and where to find it, say when users can tap it, and explain what question the feature can answer. Leave the full interaction and worked examples with numerical values to the destination guide.
 
+When a prompt covers normal use and the current exercise, explain where the feature is available and any actual requirements for using it. Label prefilled values, disabled controls, and preview-only actions as part of this practice run when they differ from normal use.
+
 Decide what question the user should be able to answer before choosing sample data for a chart guide. Choose inputs that make the relevant comparison visible in the app's actual output. A steady metric can help answer the question when the guide compares it with another measure.
 
 In the prompt, name the action, point to the value to read, and explain what conclusion the displayed results support. Use matching filters and corresponding time windows when comparing values across charts. Explain how filters change which records are included. Identify the population, measure, time unit, and each metric's denominator where applicable.
@@ -180,6 +182,7 @@ Choose checks proportional to the change and use the target project's existing t
 
 - State and data changes: focused tests for valid and invalid events, return/replay effects, identity, persistence, and failure paths. Leave a minimal runnable behavioral check for new non-trivial logic.
 - UI changes: operate the real affected flow, including its forward path and relevant back, skip, cancel, and re-entry paths. A tooltip existing is not enough to prove the target can be read or operated.
+- Guide copy: compare invitations, titles, prompts, button labels, and shared completion text with the actual behavior. In each affected language, check that words such as "after" or "first" correctly describe feature requirements, practice steps, and when sample data is cleared.
 - After an entry or its destination is redesigned, start from the current control and exercise each affected guide step. Check that the prompt names the current control and action, the highlight covers the rendered target, and the prompt leaves the required controls visible and usable at supported text sizes. When the step requires opening a screen, check that the prompt and progression reflect its actual presentation, including after going back and reopening it.
 - For a shortcut that should reveal a guide entry, use the actual shortcut and verify that the guide button comes into view after the jump settles. Tap it from the resulting position without scrolling further, and confirm that it opens the intended guide. If the shortcut can expand the destination, test with the destination both collapsed and expanded.
 - Updates within a step: compare the highlight and prompt positions before and after the interaction, and verify the new content and action state. Then advance and check that the new step is presented at its own target.
