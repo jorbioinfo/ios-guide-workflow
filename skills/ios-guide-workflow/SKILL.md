@@ -52,11 +52,15 @@ For an action-focused introduction, put necessary concepts beside the action the
 
 For independent section guides, give each its own entry, progress, and completion according to the product's policy.
 
+When pointing to another guide, explain what users might need help with, which control opens the guide, and where to find it. Describe finishing the current step or guide as a prerequisite only if the app requires it in normal use.
+
 In a basic guide, teach the actions users can perform in the current flow. If the guide points to a feature at another access level, name the shortcut and where to find it, say when users can tap it, and explain what question the feature can answer. Leave the full interaction and worked examples with numerical values to the destination guide.
 
 Decide what question the user should be able to answer before choosing sample data for a chart guide. Choose inputs that make the relevant comparison visible in the app's actual output. A steady metric can help answer the question when the guide compares it with another measure.
 
 In the prompt, name the action, point to the value to read, and explain what conclusion the displayed results support. Use matching filters and corresponding time windows when comparing values across charts. Explain how filters change which records are included. Identify the population, measure, time unit, and each metric's denominator where applicable.
+
+If a chart example uses a configurable default, such as a date range, describe it as a default. Point to the actual control for changing it when that helps users repeat the comparison with their own data.
 
 When several sections of a results panel serve the same teaching goal, show them in one step. Have users open the panel with the app's own control, then use one example to show where to find each section and which result it explains.
 
@@ -161,6 +165,8 @@ If a run removes a record that owns a visible destination, coordinate dismissal 
 When the product displays that a guide has ever been completed, distinguish that fact from the latest run's status. Define the completion event, replay behavior, compatibility, restore/merge rules, account boundary, and any version-reset policy. Preserve known history; do not invent missing history. A status indicator should follow the product's intended editability and semantics.
 
 Define automatic invitation eligibility separately from presentation, interruption, and successful completion. If the product consumes eligibility only on explicit completion or skip, leaving or terminating the app must not imply either decision; apply its agreed restart or resume policy. Preserve known resolution through replay and restore within its account and revision scope, while keeping a skip distinct from completion. A legacy record that proves only prior presentation cannot prove a user decision. Where remote state exists, handle delayed responses and offline deferral without unbounded retries or competing presentations.
+
+If a guide visits another screen or mode for practice, preserve the destination's first-visit invitation for independent entry when that is the product's policy. Verify that eligibility stays pending during the demonstration and that the user's later visit follows the normal invitation rules.
 
 Keep temporary teaching examples clearly defined and isolated from normal storage and preferences. Introduce them only when the task or product decision calls for them, reuse real components, and verify their removal or retention explicitly.
 
